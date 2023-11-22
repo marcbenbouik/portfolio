@@ -1,0 +1,14 @@
+.projectDiv {
+    display: flex;
+    flex-direction: row;
+    column-gap: 5px;
+    margin-top: 26px;
+}
+
+@media screen and (min-width: 735px) {
+    .projectDiv {
+        justify-content: space-around;
+        padding: 0px 24px;
+        margin-bottom: 44px;
+    }
+}

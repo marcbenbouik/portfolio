@@ -1,0 +1,71 @@
+.colorCircle {
+    // height: 90px;
+    // width: 90px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+
+    img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .whiteCircle {
+        // height: 86px;
+        // width: 86px;
+        border-radius: 50%;
+        position: absolute;
+        background-color: white;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .circle {
+        // height: 77px;
+        // width: 77px;
+        // border: solid 4px white;
+        border-radius: 50%;
+        overflow: hidden;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        img {
+            // width: 77px;
+            // height: auto;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+}
+
+@media screen and (min-width: 735px) {
+    .colorCircle {
+        // height: 168px;
+        // width: 168px;
+        // margin-top: 45px;
+        // margin-top: 40px;
+        // margin-left: 4%;
+        img {
+            width: 168px;
+            height: 168px;
+        }
+
+        .whiteCircle {
+            // height: 161px;
+            // width: 161px;
+        }
+
+        .circle {
+            // height: 150px;
+            // width: 150px;
+
+            img {
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+    }
+}

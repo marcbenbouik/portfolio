@@ -1,0 +1,30 @@
+-responsive desktop
+-finition responsive mobile et tablette
+-le footer /sidebar
+-modales avec presentation projet
+-faire les bulles projets
+-animations de sbulles
+-les deux affichages (grilles column)
+-corriger les 2 3 point a remplacer
+-soon un systeme de like
+
+demain matin :
+stories:
+-mettre les photo des autres projets
+-rajouter les deux projet suivant et precedents
+-rajouter le header de story
+-rajouter les deux croix
+-rajouter la miniature
+-rajouter l'ouverture au clique
+-rajouter le defilement automatique
+
+accueil:
+-faire le visuel grille
+-remplacer les logo inutile par un linkedin
+-remplacer le point d'interogation par une enveloppe
+
+finitions :
+-corriger le cercle
+-corriger lespacement de sicones dans la modale
+-corriger la police d'ecriture pour la catégorie
+git remote set-url origin <git@github.com:marcbenbouik/portfolio.git>

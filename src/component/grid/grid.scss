@@ -1,0 +1,20 @@
+.projectGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(calc(33.33% - 10px), 1fr));
+    gap: 3px;
+  }
+
+  
+  .cover {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+  
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+  

@@ -1,0 +1,77 @@
+.story {
+    background-color: #1a1a1a;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    column-gap: 50px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    // .storyProject {
+    // position: absolute;
+    // left: -40px;
+
+    // }
+    // .carousel {
+    //     width: 100vw;
+    //     position: absolute;
+    //     left: 0;
+    //     // transform: translate(-50%, -50%);
+    //     top: 50vh;
+
+
+    .active {
+        width: 65vw;
+        max-height: 850px;
+        max-width: 460px;
+        overflow: hidden;
+
+        .storyPicture {
+            width: 100%;
+            object-fit: cover;
+        }
+
+    }
+
+    .right {
+        width: 25vw;
+        margin-right: -15vw;
+        max-height: 350px;
+        max-width: 250px;
+        overflow: hidden;
+        // position: absolute;
+        // right: 0;
+        // transform: translate(-50%, -50%);
+        // top: 50vh;
+
+        .storyPicture {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .left {
+        width: 25vw;
+        margin-left: -15vw;
+        max-height: 350px;
+        max-width: 250px;
+        overflow: hidden;
+
+        .storyPicture {
+            width: 100%;
+            object-fit: cover;
+        }
+
+        // position: absolute;
+        // left: 0;
+        // transform: translate(-50%, -50%);
+        // top: 50vh;
+    }
+
+    // }
+}
