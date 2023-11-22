@@ -17,11 +17,13 @@ import ProjectStories from './pages/ProjectStories';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Router>
-      <Routes>
-        <Route path='/' element={<Main />} />
-        <Route path='/project' element={<ProjectStories />} />
-      </Routes>
-    </Router>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <Router>
+        <Routes>
+          <Route path='/' element={<Main />} />
+          <Route path='/project' element={<ProjectStories />} />
+        </Routes>
+      </Router>
+    </BrowserRouter>
   </React.StrictMode>
 );
