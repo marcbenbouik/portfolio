@@ -60,7 +60,7 @@ function ProjectPage({ id, setId, modale, setModale }) {
                     <div className="chevron chevronLeft" onClick={() => sliderLeft(pictureId, setPictureId, picture)}>
                         <ChevronLeftIcon className="left" />
                     </div>
-                    <img src={`../../../pictures/${picture[pictureId].pic}`} alt="" />
+                    <img src={`${process.env.PUBLIC_URL}/pictures/${picture[pictureId].pic}`} alt="" />
                     <div className="chevron chevronRight" onClick={() => sliderRight(pictureId, setPictureId, picture)}>
                         <ChevronRightIcon />
                     </div>

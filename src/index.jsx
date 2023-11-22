@@ -14,7 +14,7 @@ root.render(
     <Router basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route path='/' element={<Main />} />
-        <Route path='/project' element={<ProjectStories />} />
+        <Route path={process.env.PUBLIC_URL + '/project'} element={<ProjectStories />} />
       </Routes>
     </Router>
   </React.StrictMode>
