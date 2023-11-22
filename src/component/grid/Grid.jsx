@@ -15,7 +15,7 @@ function Grid() {
             {project.map((projet) => (
                 <div key={projet.id} className="cover" onClick={() => handleOpenModale(projet.id)}>
 
-                    <img src={`/pictures/${projet.cover}`} alt="" />
+                    <img src={`${process.env.PUBLIC_URL}/pictures/${projet.cover}`} alt="" />
                 </div>
             ))}
             {openModale ? <ProjectPage id={projectId} setId={setProjectId} modale={openModale} setModale={setOpenModale} /> : null}
