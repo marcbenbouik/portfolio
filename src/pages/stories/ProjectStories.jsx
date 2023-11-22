@@ -1,6 +1,6 @@
-import "../pages/projectStories.scss"
+import "../stories/ProjectStories.scss"
 
-import { project } from "../data/project"
+import { project } from "../../data/project"
 import { useRef, useState } from "react"
 function ProjectStories() {
     const [activeStory, setActiveStory] = useState(1)

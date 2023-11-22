@@ -4,7 +4,7 @@ import './styles/reset.css';
 import './styles/style.css';
 import Main from './component/main/Main';
 import { HashRouter as Router, Route, Routes } from 'react-router-dom';
-import ProjectStories from './pages/ProjectStories';
+import ProjectStories from './pages/stories/ProjectStories';
 
 
 
