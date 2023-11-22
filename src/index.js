@@ -12,6 +12,7 @@ import Main from './component/main/Main';
 import ProjectPage from './pages/ProjectPage';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import ProjectStories from './pages/ProjectStories';
+import BrowserRouter from 'react-router-dom/BrowserRouter'
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
