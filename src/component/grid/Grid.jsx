@@ -15,10 +15,10 @@ function Grid() {
             {project.map((projet) => (
                 <div key={projet.id} className="cover" onClick={() => handleOpenModale(projet.id)}>
 
-                    <img src={`../../../pictures/${projet.cover}`} alt="" />
+                    <img src={`/pictures/${projet.cover}`} alt="" />
                 </div>
             ))}
-            {openModale ? <ProjectPage id={projectId} setId={setProjectId} modale={openModale} setModale={setOpenModale}/> : null}
+            {openModale ? <ProjectPage id={projectId} setId={setProjectId} modale={openModale} setModale={setOpenModale} /> : null}
         </div>
     )
 }
