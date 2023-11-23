@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './styles/reset.css';
 import './styles/style.css';
 import Main from './component/main/Main';
-import { HashRouter as Router, Route, Routes, HashRouter } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, HashRouter } from 'react-router-dom';
 import ProjectStories from './pages/stories/ProjectStories';
 
 
