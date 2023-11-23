@@ -2,6 +2,11 @@ import "../stories/projectStories.scss"
 
 import { project } from "../../data/project"
 import { useRef, useState } from "react"
+import Circle from "../../component/circle/Circle"
+import VerifiedSharpIcon from '@mui/icons-material/VerifiedSharp';
+import { faPlay, faPause, faVolumeXmark, faChevronUp } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 function ProjectStories() {
     const [activeStory, setActiveStory] = useState(1)
     const [leftStory, setLeftStory] = useState(0)
@@ -12,8 +17,18 @@ function ProjectStories() {
     const getActiveStory = (story) => (activeStory === story ? "active" : "")
     const getLeftStory = (story) => (leftStory === story ? "left" : "")
     const getRightStory = (story) => (rightStory === story ? "right" : "")
+    const categories = {}
+    const filteredArray = project.filter((projet) => {
+        if (!categories[projet.category]) {
+            categories[projet.category] = true
+            return true
+        }
+        else {
+            return false
+        }
+    })
 
-    const filteredProjects = project.filter(projet => projet.id === activeStory || projet.id === leftStory || projet.id === rightStory);
+    const filteredProjects = filteredArray.filter(projet => projet.id === activeStory || projet.id === leftStory || projet.id === rightStory);
 
 
     function carousel(id) {
@@ -65,10 +80,36 @@ function ProjectStories() {
     }
 
     return (
-        <main className="story" ref={carouselRef} onTouchStart={startSwipe} onTouchEnd={endSwipe}>
+        <main className="story rowCenter" ref={carouselRef} onTouchStart={startSwipe} onTouchEnd={endSwipe}>
             {filteredProjects.map((projet) => (
-                <div key={projet.id} className={`${getActiveStory(projet.id)} ${getLeftStory(projet.id)} ${getRightStory(projet.id)}`} onClick={() => carousel(projet.id)}>
+                <div key={projet.id} className={`border ${getActiveStory(projet.id)} ${getLeftStory(projet.id)} ${getRightStory(projet.id)}`} onClick={() => carousel(projet.id)}>
+                    {projet.id === activeStory ? (
+                        <div className="storyHeader rowCenter">
+                            <div className="logoStoryHeader rowCenter">
+                                <Circle dimension={45} />
+                                <h3>{projet.name}</h3>
+                                <VerifiedSharpIcon style={{ color: "#ffff", }} />
+                                <p className="categoryStoryHeader">{projet.category}</p>
+                            </div>
+                            <div className="buttonStoryHeader rowCenter">
+                                <FontAwesomeIcon icon={faPause} style={{ color: "#ffff", }} />
+                                <FontAwesomeIcon icon={faPlay} style={{ color: "#ffff", }} />
+                                <FontAwesomeIcon icon={faVolumeXmark} style={{ color: "#ffff", }} />
+                                <svg className="storyPoint">
+                                    <circle cx="6" cy="10" r="2.75"></circle>
+                                    <circle cx="14" cy="10" r="2.75"></circle>
+                                    <circle cx="22" cy="10" r="2.75"></circle>
+                                </svg>
+                            </div>
+                        </div>
+                    ) : null}
                     <img src={`../../../pictures/${projet.story}`} alt="" className="storyPicture" />
+                    {projet.id === activeStory ? (
+                        <div className="storyFooter">
+                            <FontAwesomeIcon icon={faChevronUp} style={{ color: "#ffff", }} />
+                            <p>Voir plus</p>
+                        </div>
+                    ) : null}
                 </div>
             ))}
         </main>

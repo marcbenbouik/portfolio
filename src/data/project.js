@@ -18,8 +18,8 @@ export const project = [
   },
   {
     id: 1,
-    name: "Location immobilière KASA",
-    category: "REACT",
+    name: "KASA",
+    category: "React",
     description: "Réalisation d'une application web de location immobilière. Entièrement réalisée en Reactjs",
     pictures: [
       { pic: "kasa/accueil.png" },
@@ -33,7 +33,7 @@ export const project = [
   },
   {
     id: 2,
-    name: "Portfolio de l'architecte d'intérieur Sophie Buel",
+    name: "Sophie Buel",
     category: "API",
     description: "Réalisation du portfolio d'une architecte d'intérieur, à l'aide de HTML, SCSS, Javascript, et d'une API REST",
     pictures: [
@@ -62,7 +62,7 @@ export const project = [
   {
     id: 4,
     name: "Argent-Bank",
-    category: "REACT API",
+    category: "React",
     description: "Réalisation de application web d'une banque, à l'aide de Reactjs, et d'une API REST",
     pictures: [
       { pic: "argent-bank/accueil.png" },
