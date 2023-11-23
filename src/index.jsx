@@ -11,7 +11,7 @@ import ProjectStories from './pages/stories/ProjectStories';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route path='/' element={<Main />} />
         <Route path='/project' element={<ProjectStories />} />
