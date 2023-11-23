@@ -1,4 +1,4 @@
-import "../stories/ProjectStories.scss"
+import "../stories/projectStories.scss"
 
 import { project } from "../../data/project"
 import { useRef, useState } from "react"
