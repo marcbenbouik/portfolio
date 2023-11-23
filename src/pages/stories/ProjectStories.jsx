@@ -93,7 +93,7 @@ function ProjectStories() {
                             </div>
                             <div className="buttonStoryHeader rowCenter">
                                 <FontAwesomeIcon icon={faPause} style={{ color: "#ffff", }} />
-                                <FontAwesomeIcon icon={faPlay} style={{ color: "#ffff", }} />
+                                {/* <FontAwesomeIcon icon={faPlay} style={{ color: "#ffff", }} /> */}
                                 <FontAwesomeIcon icon={faVolumeXmark} style={{ color: "#ffff", }} />
                                 <svg className="storyPoint">
                                     <circle cx="6" cy="10" r="2.75"></circle>
