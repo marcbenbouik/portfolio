@@ -60,7 +60,7 @@ function ProjectPage({ id, setId, modale, setModale }) {
                         <ChevronRightIcon />
                     </div>
                 </div>
-                <ProjectFooter description={data[0].description} />
+                <ProjectFooter description={data[0].description} github={data[0].github} deploy={data[0].deploiement} />
             </div>
         </div>
     )

@@ -16,16 +16,13 @@ function Main() {
 
     useEffect(() => {
         function checkWidth() {
-            if (window.innerWidth > 735) {
-                setIsWider(true)
-            }
-            else {
-                setIsWider(false)
-            }
+            setIsWider(window.innerWidth > 735);
         }
-        checkWidth()
-        window.onresize = checkWidth
-    }, [isWider])
+        window.addEventListener('resize', checkWidth);
+        return () => {
+            window.removeEventListener('resize', checkWidth);
+        };
+    }, []);
     return (
         <main>
             <Header text={"portfolio"} />

@@ -6,7 +6,7 @@ import VerifiedSharpIcon from '@mui/icons-material/VerifiedSharp';
 import StatisticBar from "../statisticBar/StatisticBar";
 import { useStore } from "../../store"
 function Section() {
-    
+
     const wider = useStore((state) => state.isWider)
 
     return (
@@ -25,9 +25,9 @@ function Section() {
                             </svg>
                         </div>
                         <div className="buttonDiv">
-                            <Button buttonText="Linkedin" />
-                            <Button buttonText="Malt" />
-                            <Button buttonText="mail" />
+                            <Button buttonText="Linkedin" link={"www.linkedin.com/in/marc-benbouik-97a5652a1"} />
+                            <Button buttonText="Malt" link={"https://www.malt.fr/profile/marcbenbouik?overview"} />
+                            <Button buttonText="mail" link={"mailto:marc.benbouik@gmail.com"} />
                         </div>
                     </div>
                     {wider ? <StatisticBar /> : null}

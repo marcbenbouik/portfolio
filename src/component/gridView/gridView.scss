@@ -6,6 +6,13 @@
     width: 100%;
     height: 44px;
     border-top: solid 1px rgb(219, 219, 219);
+
+    .iconName {
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
 }
 
 @media screen and (min-width: 735px) {
@@ -15,9 +22,6 @@
         height: 53px;
 
         .iconName {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
             column-gap: 6px;
             color: #737373;
             font-size: 12px;
