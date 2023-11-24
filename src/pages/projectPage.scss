@@ -33,35 +33,44 @@
         align-items: center;
         // transform: translate(-50%);
     }
-}
 
-.globalProject {
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    width: 63vw;
-    max-width: 500px;
-    border-radius: 8px;
-    position: relative;
-
-    .returnChevron {
-        position: absolute;
-        left: 16px;
-        top: 10px;
-    }
-
-
-
-    .projectPicture {
-        width: 100%;
+    .globalProject {
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        width: 63vw;
+        max-width: 500px;
+        border-radius: 8px;
         position: relative;
 
+        .returnChevron {
+            position: absolute;
+            left: 16px;
+            top: 10px;
+        }
 
-        // .left{
-        //     opacity: 0.5;
-        // }
-        img {
+
+
+        .projectPicture {
             width: 100%;
+            position: relative;
+
+
+            // .left{
+            //     opacity: 0.5;
+            // }
+            img {
+                width: 100%;
+            }
         }
     }
+}
+
+@media screen and (max-width: 500px) {
+    .backgroundProject {
+        .globalProject {
+            width: 70vw;
+        }
+    }
+
 }
