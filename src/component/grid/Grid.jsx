@@ -17,7 +17,7 @@ function Grid() {
     return (
         <div className={display ? "projectList" : "projectGrid"}>
             {project.map((projet) => (
-                <div>
+                <div key={projet.id}>
                     {display ? (<ProjectHeader category={projet.category} />) : null}
                     <div key={projet.id} className="cover" onClick={() => handleOpenModale(projet.id)}>
                         <img src={`${process.env.PUBLIC_URL}/pictures/${projet.cover}`} alt="" />

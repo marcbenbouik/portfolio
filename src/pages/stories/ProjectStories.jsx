@@ -6,11 +6,11 @@ import Circle from "../../component/circle/Circle"
 import VerifiedSharpIcon from '@mui/icons-material/VerifiedSharp';
 import { faPlay, faPause, faVolumeXmark, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useParams } from "react-router-dom";
 
 function ProjectStories() {
-    const [activeStory, setActiveStory] = useState(1)
-    const [leftStory, setLeftStory] = useState(0)
-    const [rightStory, setRightStory] = useState(2)
+    const startId = useParams()
+    const intStart = parseInt(startId.id, 10)
     const [storyInCategory, setStoryInCategory] = useState(0)
     const [activeProjectInStory, setActiveProjectInStory] = useState(null)
     const [storyByCategory, setStoryByCategory] = useState([])
@@ -21,7 +21,21 @@ function ProjectStories() {
     const responsiveArray = project.filter((projet) => projet.category === "Responsive")
     const apiArray = project.filter((projet) => projet.category === "API")
     const reactArray = project.filter((projet) => projet.category === "React")
-    console.log(seoArray, responsiveArray, reactArray, apiArray)
+
+    const categories = []
+    const filteredArray = project.filter((projet) => {
+        if (!categories[projet.category]) {
+            categories[projet.category] = true
+            return true
+        }
+        else {
+            return false
+        }
+    })
+    console.log(startId.id, intStart)
+    const [activeStory, setActiveStory] = useState(intStart)
+    const [leftStory, setLeftStory] = useState(intStart == 0 ? null : intStart - 1)
+    const [rightStory, setRightStory] = useState(intStart == filteredArray.length - 1 ? null : intStart + 1)
 
     const getActiveStory = (story) => {
         if (filteredProjects.length === 3) {
@@ -57,16 +71,6 @@ function ProjectStories() {
         }
     }
 
-    const categories = []
-    const filteredArray = project.filter((projet) => {
-        if (!categories[projet.category]) {
-            categories[projet.category] = true
-            return true
-        }
-        else {
-            return false
-        }
-    })
 
 
     const start = leftStory !== null ? leftStory : 0;

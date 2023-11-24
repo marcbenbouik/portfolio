@@ -1,32 +1,38 @@
--responsive desktop
--finition responsive mobile et tablette
--le footer /sidebar
--modales avec presentation projet
--faire les bulles projets
--animations de sbulles
+-responsive desktop v
+-modales avec presentation projet v
+-faire les bulles projets v 
 -les deux affichages (grilles column)
--corriger les 2 3 point a remplacer
--soon un systeme de like
+-corriger les 2 3 point a remplacer v
 
 demain matin :
 stories:
 -mettre les photo des autres projets v
--rajouter les deux projet suivant et precedents
 -rajouter le header de story v
--rajouter les deux croix
--rajouter la miniature
--rajouter l'ouverture au clique
--rajouter le defilement automatique v
+-rajouter la miniature v
+-rajouter l'ouverture au clique v
+-rajouter le defilement automatique a voir
 
 accueil:
--faire le visuel grille
--remplacer les logo inutile par un linkedin
--remplacer le point d'interogation par une enveloppe
--tout checker en desktop et corriger
+-faire le visuel grille v
+-remplacer le point d'interogation par une enveloppe v
+-tout checker en desktop et corriger v
 
-finitions :
+
+a faire :
 -corriger le cercle
 -corriger lespacement de sicones dans la modale
 -corriger la police d'ecriture pour la catégorie
+-remplacer les logo inutile par un linkedin
+-rajouter les deux projet suivant et precedents a voir
+-rajouter les deux croix
+-finition responsive mobile et tablette
+-soon un systeme de like
+-debug
+
+
+
+
+
+
 git remote set-url origin <git@github.com:marcbenbouik/portfolio.git>
 // "homepage": "https://marcbenbouik.github.io/portfolio/",

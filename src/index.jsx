@@ -14,7 +14,7 @@ root.render(
     <Router>
       <Routes>
         <Route path='/' element={<Main />} />
-        <Route path='/project' element={<ProjectStories />} />
+        <Route path='/project/:id' element={<ProjectStories />} />
       </Routes>
     </Router>
   </React.StrictMode>

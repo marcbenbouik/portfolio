@@ -8,7 +8,7 @@ import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import { project } from "../data/project";
 import { useState } from "react";
 import ProjectHeader from "../component/projectHeader/ProjectHeader";
-import Project from "../component/project/Project";
+import Project from "../component/storiesSection/StoriesSection";
 import ProjectFooter from "../component/projectFooter/ProjectFooter";
 
 function ProjectPage({ id, setId, modale, setModale }) {

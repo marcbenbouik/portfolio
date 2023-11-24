@@ -25,15 +25,15 @@ function Section() {
                             </svg>
                         </div>
                         <div className="buttonDiv">
-                            <Button buttonText="Linkdin" />
+                            <Button buttonText="Linkedin" />
                             <Button buttonText="Malt" />
-                            <Button buttonText="?" />
+                            <Button buttonText="mail" />
                         </div>
                     </div>
                     {wider ? <StatisticBar /> : null}
                     <div className="textDiv">
-                        <h3>Développeur junior</h3>
-                        <p>Developeur web front-end <br />Intégrateur web <br /> Passioné et motivé <br />Mon numéro de téléphone <br />Mon Email</p>
+                        <h3>Développeur web front-end</h3>
+                        <p>Intégrateur web <br /> Passioné et motivé <br /> Mon objectif : fullstack JS <br />0677197495 <br />marc.benbouik@gmail.com</p>
                         <p className="diplome">Futur diplomé de l'école <strong>Openclassrooms</strong></p>
                     </div>
                 </div>
