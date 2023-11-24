@@ -7,16 +7,14 @@ function Circle({ dimension, wider }) {
     const [colorCircleSize, setColorCircleSize] = useState()
     const [whiteCircleSize, setWhiteCircleSize] = useState()
     const [circleSize, setCircleSize] = useState()
-    console.log(wider)
     useEffect(() => {
         function setSize(dimension, wider) {
-            console.log(wider)
             setColorCircleSize({ height: dimension, width: dimension });
             if (wider) {
                 setCircleSize({ height: dimension - 18, width: dimension - 18 });
                 setWhiteCircleSize({ height: dimension - 7, width: dimension - 7 });
             }
-            else if(dimension === 45){
+            else if (dimension === 45) {
                 setCircleSize({ height: dimension - 8, width: dimension - 8 });
                 setWhiteCircleSize({ height: dimension - 4, width: dimension - 4 });
             }
@@ -35,8 +33,7 @@ function Circle({ dimension, wider }) {
 
     return (
         <div className="colorCircle" style={colorCircleSize}>
-            {console.log(dimension, colorCircleSize, whiteCircleSize, circleSize)}
-            <img src={instagram} alt="" style={colorCircleSize}/>
+            <img src={instagram} alt="" style={colorCircleSize} />
             <div className="whiteCircle" style={whiteCircleSize}>
                 <div className="circle" style={circleSize}>
                     <img src={profil2} alt="photo de profil" style={circleSize} />

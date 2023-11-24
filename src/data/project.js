@@ -34,7 +34,7 @@ export const project = [
   {
     id: 2,
     name: "Sophie Buel",
-    category: "API",
+    category: "React",
     description: "Réalisation du portfolio d'une architecte d'intérieur, à l'aide de HTML, SCSS, Javascript, et d'une API REST",
     pictures: [
       { pic: "sophie-buel/logout.png" },
@@ -56,13 +56,14 @@ export const project = [
       { pic: "ohmyfood/restaurant.png" }
     ],
     cover: "ohmyfood/cover.png",
+    story: "ohmyfood/mobile.png",
     github: "https://github.com/marcbenbouik/projet_4.git",
     deploiement: "https://marcbenbouik.github.io/projet_4/"
   },
   {
     id: 4,
     name: "Argent-Bank",
-    category: "React",
+    category: "API",
     description: "Réalisation de application web d'une banque, à l'aide de Reactjs, et d'une API REST",
     pictures: [
       { pic: "argent-bank/accueil.png" },
@@ -70,6 +71,7 @@ export const project = [
       { pic: "argent-bank/count.png" }
     ],
     cover: "argent-bank/cover.png",
+    story: "argent-bank/mobile.png",
     github: "https://github.com/marcbenbouik/projet_11.git",
     deploiement: "à deployer"
   }

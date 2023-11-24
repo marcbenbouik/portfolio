@@ -4,9 +4,10 @@ import "../section/section.scss"
 import VerifiedSharpIcon from '@mui/icons-material/VerifiedSharp';
 // import { useState, useEffect } from 'react';
 import StatisticBar from "../statisticBar/StatisticBar";
-
-function Section({ wider }) {
-
+import { useStore } from "../../store"
+function Section() {
+    
+    const wider = useStore((state) => state.isWider)
 
     return (
         <section>

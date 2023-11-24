@@ -5,10 +5,12 @@ import Project from "../project/Project"
 import Section from "../section/Section"
 import StatisticBar from "../statisticBar/StatisticBar"
 import { useEffect, useState } from "react"
+import { useStore } from "../../store"
 
 
 function Main() {
-    const [isWider, setIsWider] = useState(false)
+    const isWider = useStore((state) => state.isWider)
+    const setIsWider = useStore((state) => state.setWider)
 
     useEffect(() => {
         function checkWidth() {
@@ -24,11 +26,11 @@ function Main() {
     }, [isWider])
     return (
         <main>
-            <Header wider={isWider} text={"portfolio"} />
-            <Section wider={isWider} />
+            <Header text={"portfolio"} />
+            <Section />
             <Project />
             {!isWider ? (<StatisticBar />) : null}
-            <GridView wider={isWider} />
+            <GridView />
             <Grid />
         </main>
     )

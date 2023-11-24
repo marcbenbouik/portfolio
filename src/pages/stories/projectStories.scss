@@ -1,20 +1,57 @@
 .story {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     background-color: #1a1a1a;
     position: fixed;
     left: 0px;
     top: 0px;
     height: 100vh;
-    // position: relative;
-    // column-gap: 0px;
-    // justify-content: center;
-    // overflow: hidden;
+    width: 100vw;
+    position: relative;
+    column-gap: 0px;
+    overflow: hidden;
 
+    .left,
+    .right,
     .active {
-        width: 100vw;
-
         .storyPicture {
             width: 100%;
         }
+    }
+
+    .left {
+        display: none;
+    }
+
+    .right {
+        display: none;
+    }
+
+    .active {
+        width: 100vw;
+        max-width: 500px;
+        z-index: 1;
+
+        .clickRight {
+            height: 100%;
+            width: 50%;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            z-index: 5;
+        }
+
+        .clickLeft {
+            height: 100%;
+            width: 50%;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            z-index: 5;
+        }
+
 
         .storyHeader {
             background: linear-gradient(to top, #0000, #000);
@@ -48,15 +85,22 @@
             }
         }
 
+        .storyFooter {
+            background: linear-gradient(to bottom, #0000, #000);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            width: 100%;
+            padding: 15px 0px;
+        }
+
     }
 
-    .left {
-        display: none;
-    }
-
-    .right {
-        display: none;
-    }
 
 }
 
@@ -69,72 +113,38 @@
 }
 
 
-@media screen and (min-width: 735px) {}
+@media screen and (min-width: 735px) {
 
-//         .storyPicture {
-//             width: 100%;
-//             height: 100%;
-//             object-fit: contain;
-//         }
+    .story {
+        column-gap: 50px;
 
-//         .story {
-//             .border {
-//                 border-radius: 8px;
-//             }
+        .border {
+            border-radius: 12px;
+        }
 
+        .active {
+            position: relative;
+            overflow: hidden;
+        }
 
-//             .active {
-//                 width: 70vw;
-//                 // height: 100%;
-//                 max-height: 850px;
-//                 max-width: 460px;
-//                 overflow: hidden;
-//                 position: relative;
+        .right {
+            display: initial;
+            width: 25vw;
+            // position: absolute;
+            // right: -10%;
+            margin-right: -15vw;
+            max-height: 350px;
+            max-width: 250px;
+            overflow: hidden;
+        }
 
-
-
-
-//                 .buttonStoryHeader {
-//                     justify-content: center;
-//                     column-gap: 15px;
-
-//                     .storyPoint {
-//                         height: 20px;
-//                         width: 25px;
-//                         fill: white
-//                     }
-//                 }
-//             }
-
-//             .storyFooter {
-//                 background: linear-gradient(to bottom, #0000, #000);
-//                 color: white;
-//                 display: flex;
-//                 flex-direction: column;
-//                 align-items: center;
-//                 justify-content: center;
-//                 position: absolute;
-//                 bottom: 0px;
-//                 left: 0px;
-//                 width: 100%;
-//                 padding: 15px 0px;
-//             }
-//         }
-
-//         .right {
-//             width: 25vw;
-//             margin-right: -15vw;
-//             max-height: 350px;
-//             max-width: 250px;
-//             overflow: hidden;
-//         }
-
-//         .left {
-//             width: 25vw;
-//             margin-left: -15vw;
-//             max-height: 350px;
-//             max-width: 250px;
-//             overflow: hidden;
-//         }
-//     }
-// }
+        .left {
+            display: initial;
+            width: 25vw;
+            margin-left: -15vw;
+            max-height: 350px;
+            max-width: 250px;
+            overflow: hidden;
+        }
+    }
+}
