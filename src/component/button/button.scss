@@ -1,5 +1,14 @@
-.link {
-
+.button {
+    padding: 7px 16px;
+    border-radius: 8px;
+    background-color: #EFEFEF;
+    font-size: 14px;
+    border: unset;
+    font-family: inherit;
+    line-height: 18px;
+    max-height: 32px;
+    display: flex;
+    align-items: center;
     text-decoration: none;
     color: black;
 
@@ -7,17 +16,4 @@
         color: black;
     }
 
-    .button {
-        padding: 7px 16px;
-        border-radius: 8px;
-        background-color: #EFEFEF;
-        font-size: 14px;
-        border: unset;
-        font-family: inherit;
-        line-height: 18px;
-        max-height: 32px;
-        display: flex;
-        align-items: center;
-
-    }
 }

@@ -23,20 +23,10 @@ function StoriesSection() {
                 <Link to={`/project/${index}`} className="link">
                     <StoryCircle title={projet.category} image={projet.cover} />
                 </Link>
-
-
             ))}
-
          <StoryCircle title="Full stack" image={"/soon.png"} />
         </section>
 
     )
-
-    //     <div className="projectDiv">
-    //         <StoryCircle title="SEO" image={soon} />
-    //         <StoryCircle title="Responsive" image={soon} />
-    //         <StoryCircle title="API" image={soon} />
-    //     </div>
-    // )
 }
 export default StoriesSection

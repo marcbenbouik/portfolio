@@ -25,7 +25,7 @@ function Section() {
                             </svg>
                         </div>
                         <div className="buttonDiv">
-                            <Button buttonText="Linkedin" link={"www.linkedin.com/in/marc-benbouik-97a5652a1"} />
+                            <Button buttonText="Linkedin" link={"https://www.linkedin.com/in/marc-benbouik-97a5652a1"} />
                             <Button buttonText="Malt" link={"https://www.malt.fr/profile/marcbenbouik?overview"} />
                             <Button buttonText="mail" link={"mailto:marc.benbouik@gmail.com"} />
                         </div>

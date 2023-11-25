@@ -8,7 +8,6 @@ import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import { project } from "../data/project";
 import { useState } from "react";
 import ProjectHeader from "../component/projectHeader/ProjectHeader";
-import Project from "../component/storiesSection/StoriesSection";
 import ProjectFooter from "../component/projectFooter/ProjectFooter";
 
 function ProjectPage({ id, setId, modale, setModale }) {
@@ -40,7 +39,7 @@ function ProjectPage({ id, setId, modale, setModale }) {
     }
 
     return (
-        <div className="backgroundProject">
+        <div className="backgroundProject" role="dialog" aria-labelledby="header" aria-describedby="description">
             <div className="chevron chevronLeft" onClick={() => { sliderLeft(id, setId, project); setPictureId(0); }} >
                 <ChevronLeftIcon className="left" />
             </div>
@@ -48,7 +47,7 @@ function ProjectPage({ id, setId, modale, setModale }) {
                 <ChevronRightIcon />
             </div>
             <div className="globalProject">
-                <Header title="Publication" text={data[0].name} />
+                <Header title="Publication" text={data[0].name} id="header" />
                 <ChevronLeftIcon className="returnChevron" onClick={() => setModale(!modale)} />
                 <ProjectHeader category={data[0].category} />
                 <div className="projectPicture">
@@ -60,7 +59,7 @@ function ProjectPage({ id, setId, modale, setModale }) {
                         <ChevronRightIcon />
                     </div>
                 </div>
-                <ProjectFooter description={data[0].description} github={data[0].github} deploy={data[0].deploiement} />
+                <ProjectFooter id="description" description={data[0].description} github={data[0].github} deploy={data[0].deploiement} />
             </div>
         </div>
     )

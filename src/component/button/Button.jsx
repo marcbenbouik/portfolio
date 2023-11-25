@@ -4,9 +4,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Button({ buttonText, link }) {
     return (
-        <a href={link} className="link">
-            <button className="button">{buttonText === "mail" ? (<FontAwesomeIcon icon={faEnvelope} />) : buttonText}</button>
-
+        <a href={link} className="button link">
+            {buttonText === "mail" ? (<FontAwesomeIcon icon={faEnvelope} />) : buttonText}
         </a>
     )
 }

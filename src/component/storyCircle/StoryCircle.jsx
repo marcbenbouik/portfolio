@@ -5,7 +5,7 @@ function StoryCircle({ image, title }) {
         <div className="globalCircle">
             <div className="whiteCircle">
                 <div className="circle">
-                    <img src={`../../../pictures/${image}`} alt="miniature projet" />
+                    <img src={`../../../pictures/${image}`} alt={`miniature des projet ${title}`} />
                 </div>
             </div>
             <h3>{title}</h3>

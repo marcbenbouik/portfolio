@@ -19,33 +19,28 @@ accueil:
 
 
 a faire :
--corriger la police d'ecriture pour la catégorie
--remplacer les logo inutile par un linkedin
 -rajouter les deux projet suivant et precedents a voir
--rajouter les deux croix
--finition responsive mobile et tablette
+
 -soon un systeme de like
 -debug
 
 details : 
 
-elargir modale mobile
-aligner les fleches
 bouton like a mettre
 
-mettre les croix
-corriger taille stories
 
 
-
-bouton enregistrer en linkedin
-bouton autre en linkedin
-bouton pause et cut sound en linkedin et malt
-bloquer bouton autre
 
 deploiement
 optimization
+debug
 
+
+soutenance :
+point a ameliorer :
+    -transition story
+    -defilement automatique
+    -voir plus fonctionnel
 
 
 

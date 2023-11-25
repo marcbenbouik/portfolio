@@ -14,13 +14,19 @@ function Grid() {
         setProjectId(projectId)
         setOpenModale(true)
     }
+
+    function keyCloseModale(e) {
+        if (e.key === 'Escape') {
+            setOpenModale(false)
+        }
+    }
     return (
-        <div className={display ? "projectList" : "projectGrid"}>
+        <div className={display ? "projectList" : "projectGrid"} onKeyDown={keyCloseModale}>
             {project.map((projet) => (
                 <div key={projet.id}>
                     {display ? (<ProjectHeader category={projet.category} />) : null}
-                    <div key={projet.id} className="cover" onClick={() => handleOpenModale(projet.id)}>
-                        <img src={`${process.env.PUBLIC_URL}/pictures/${projet.cover}`} alt="" />
+                    <div tabIndex="0" key={projet.id} className="cover" onClick={() => handleOpenModale(projet.id)}>
+                        <img src={`${process.env.PUBLIC_URL}/pictures/${projet.cover}`} alt={`photo du projet ${projet.name}`} />
                     </div>
                     {display ? (<ProjectFooter description={""} />) : null}
                 </div>

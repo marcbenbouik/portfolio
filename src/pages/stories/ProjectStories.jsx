@@ -4,9 +4,10 @@ import { project } from "../../data/project"
 import { useEffect, useRef, useState } from "react"
 import Circle from "../../component/circle/Circle"
 import VerifiedSharpIcon from '@mui/icons-material/VerifiedSharp';
-import { faPlay, faPause, faVolumeXmark, faChevronUp } from "@fortawesome/free-solid-svg-icons";
+import { faPlay, faPause, faVolumeXmark, faChevronUp, faXmark } from "@fortawesome/free-solid-svg-icons";
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 function ProjectStories() {
     const startId = useParams()
@@ -215,6 +216,9 @@ function ProjectStories() {
     console.log(leftStory, activeStory, rightStory, filteredProjects, storiesByCategory)
     return (
         <main className="story rowCenter" ref={carouselRef} onTouchStart={startSwipe} onTouchEnd={endSwipe}>
+            <Link className="xmark" to={"/"} >
+            <FontAwesomeIcon icon={faXmark} size="xl"/>
+            </Link>
             {filteredProjects.map((projet, index) => {
                 const storiesByCategoryCondition = (leftStory === null && index === 0) || (index === 1 && rightStory === null) || (filteredProjects[2] !== undefined && index === 1);
                 storiesByCategory = storiesByCategoryCondition ? project.filter((proj) => proj.category === project[projet.id].category) : []
@@ -222,16 +226,39 @@ function ProjectStories() {
                     <div key={projet.id} className={`border ${getActiveStory(index)}`} onClick={() => carousel(index, projet.id)}>
                         {storiesByCategoryCondition ? (
                             <div className="storyHeader rowCenter" onLoad={() => filtrage(projet.category)}>
+                                <div className="whiteContainer">
+                                    {storyByCategory[storyInCategory] ? (
+                                        storyByCategory.map((image, index) => (
+                                            <div className={index !== storyInCategory ? "grey white" : "white"}></div>
+                                        ))
+                                    ) : null}
+                                </div>
                                 <div className="logoStoryHeader rowCenter">
                                     <Circle dimension={45} />
-                                    <h3>{projet.name}</h3>
+                                    <h3>{storyByCategory[storyInCategory] ? storyByCategory[storyInCategory].name : projet.name}</h3>
                                     <VerifiedSharpIcon style={{ color: "#ffff", }} />
                                     <p className="categoryStoryHeader">{projet.category}</p>
                                 </div>
                                 <div className="buttonStoryHeader rowCenter">
-                                    <FontAwesomeIcon icon={faPause} style={{ color: "#ffff", }} />
+                                    <div className="bookmark">
+                                        <a href="https://www.linkedin.com/in/marc-benbouik-97a5652a1">
+                                            <FontAwesomeIcon icon={faLinkedin} size="med" style={{ color: "#ffff", }} />
+                                        </a>
+                                        <div className="linkedin">
+                                            <FontAwesomeIcon icon={faPause} style={{ color: "#ffff", }} />
+                                            {/* <BookmarkBorderSharpIcon sx={{ fontSize: 29 }} /> */}
+                                        </div>
+                                    </div>
+                                    <div className="bookmark">
+                                        <a href="https://www.linkedin.com/in/marc-benbouik-97a5652a1">
+                                            <FontAwesomeIcon icon={faLinkedin} size="med" style={{ color: "#ffff", }} />
+                                        </a>
+                                        <div className="linkedin">
+                                            <FontAwesomeIcon icon={faVolumeXmark} style={{ color: "#ffff", }} />
+                                            {/* <BookmarkBorderSharpIcon sx={{ fontSize: 29 }} /> */}
+                                        </div>
+                                    </div>
                                     {/* <FontAwesomeIcon icon={faPlay} style={{ color: "#ffff", }} /> */}
-                                    <FontAwesomeIcon icon={faVolumeXmark} style={{ color: "#ffff", }} />
                                     <svg className="storyPoint">
                                         <circle cx="6" cy="10" r="2.75"></circle>
                                         <circle cx="14" cy="10" r="2.75"></circle>
@@ -244,10 +271,10 @@ function ProjectStories() {
                         <img src={`../../../pictures/${storiesByCategoryCondition && storyByCategory[storyInCategory] ? storyByCategory[storyInCategory].story : projet.story}`} alt="" className="storyPicture" />
                         {activeStory === projet.id ? (<div className="clickLeft" onClick={clickLeftInStory}></div>) : null}
                         {projet.id === activeStory ? (
-                            <div className="storyFooter">
+                            <Link className="storyFooter">
                                 <FontAwesomeIcon icon={faChevronUp} style={{ color: "#ffff", }} />
                                 <p>Voir plus</p>
-                            </div>
+                            </Link>
                         ) : null}
                     </div>
                 )

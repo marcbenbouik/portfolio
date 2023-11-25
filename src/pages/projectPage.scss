@@ -20,7 +20,6 @@
         right: 8px;
     }
 
-    // transform: translate(50%, 50%);
     .chevron {
         position: absolute;
         top: 50%;
@@ -33,7 +32,8 @@
         align-items: center;
         // transform: translate(-50%);
     }
-
+    // transform: translate(50%, 50%);
+    
     .globalProject {
         display: flex;
         flex-direction: column;
@@ -42,30 +42,30 @@
         max-width: 500px;
         border-radius: 8px;
         position: relative;
-
+        
         .returnChevron {
             position: absolute;
             left: 16px;
             top: 10px;
         }
-
-
-
+        
+        
+        
         .projectPicture {
             width: 100%;
             position: relative;
-
-
+            
+            
             // .left{
-            //     opacity: 0.5;
-            // }
-            img {
-                width: 100%;
+                //     opacity: 0.5;
+                // }
+                img {
+                    width: 100%;
+                }
             }
         }
     }
-}
-
+    
 @media screen and (max-width: 500px) {
     .backgroundProject {
         .globalProject {

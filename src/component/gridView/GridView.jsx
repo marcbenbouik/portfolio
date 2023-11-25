@@ -4,6 +4,8 @@ import AssignmentIndOutlinedIcon from '@mui/icons-material/AssignmentIndOutlined
 import "../gridView/gridView.scss"
 import { useEffect, useState } from 'react';
 import { useStore } from '../../store';
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function GridView() {
     const display = useStore((state) => state.display)
@@ -41,9 +43,14 @@ function GridView() {
                 <ReorderSharpIcon style={{ fontSize: iconSize }} />
                 {wider ? (<p>LISTE</p>) : null}
             </div>
-            <div className='iconName' style={{ color: getIconColor("other"), borderTop: getBorder("other") }} onClick={() => handleIconClick("other")} >
-                <AssignmentIndOutlinedIcon style={{ fontSize: iconSize }} />
-                {wider ? (<p>AUTRE</p>) : null}
+            <div className='iconName bookmark' style={{ color: getIconColor("other"), borderTop: getBorder("other") }} onClick={() => handleIconClick("other", display)} >
+                <a href="https://www.linkedin.com/in/marc-benbouik-97a5652a1">
+                    <FontAwesomeIcon icon={faLinkedin} size="xl" />
+                </a>
+                <div className="linkedin">
+                    <AssignmentIndOutlinedIcon style={{ fontSize: iconSize }} />
+                    {wider ? (<p>AUTRE</p>) : null}
+                </div>
             </div>
         </div>
     )
