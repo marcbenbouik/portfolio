@@ -26,7 +26,7 @@ function Grid() {
                 <div key={projet.id}>
                     {display ? (<ProjectHeader category={projet.category} />) : null}
                     <div tabIndex="0" key={projet.id} className="cover" onClick={() => handleOpenModale(projet.id)}>
-                        <img src={`${process.env.PUBLIC_URL}/pictures/${projet.cover}`} alt={`photo du projet ${projet.name}`} />
+                        <img src={`${process.env.PUBLIC_URL}/pictures/${projet.cover}`} alt={`photo du projet ${projet.name}`} width={298} height={298} />
                     </div>
                     {display ? (<ProjectFooter description={""} />) : null}
                 </div>

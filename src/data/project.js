@@ -11,7 +11,7 @@ export const project = [
       { pic: "nina-carducci/SEO_desktop.png" },
       { pic: "nina-carducci/SEO_mobile.png" }
     ],
-    cover: "nina-carducci/cover.png",
+    cover: "nina-carducci/cover.webp",
     story: "nina-carducci/mobile.png",
     github: "https://github.com/marcbenbouik/projet_9.git",
     deploiement: "https://marcbenbouik.github.io/projet_9/"
@@ -26,7 +26,7 @@ export const project = [
       { pic: "kasa/annonce.png" },
       { pic: "kasa/a-propos.png" }
     ],
-    cover: "kasa/cover.png",
+    cover: "kasa/cover.webp",
     story: "kasa/mobile.png",
     github: "https://github.com/marcbenbouik/projet_8.git",
     deploiement: "https://marcbenbouik.github.io/projet_8/"
@@ -41,7 +41,7 @@ export const project = [
       { pic: "sophie-buel/login.png" },
       { pic: "sophie-buel/edition.png" }
     ],
-    cover: "sophie-buel/cover.png",
+    cover: "sophie-buel/cover.webp",
     story: "sophie-buel/mobile.png",
     github: "https://github.com/marcbenbouik/projet_8.git",
     deploiement: "a deployer"
@@ -55,7 +55,7 @@ export const project = [
       { pic: "ohmyfood/accueil.png" },
       { pic: "ohmyfood/restaurant.png" }
     ],
-    cover: "ohmyfood/cover.png",
+    cover: "ohmyfood/cover.webp",
     story: "ohmyfood/mobile.png",
     github: "https://github.com/marcbenbouik/projet_4.git",
     deploiement: "https://marcbenbouik.github.io/projet_4/"
@@ -66,11 +66,11 @@ export const project = [
     category: "API",
     description: "Réalisation de application web d'une banque, à l'aide de Reactjs, et d'une API REST",
     pictures: [
-      { pic: "argent-bank/accueil.png" },
+      { pic: "argent-bank/accueil.webp" },
       { pic: "argent-bank/signin.png" },
       { pic: "argent-bank/count.png" }
     ],
-    cover: "argent-bank/cover.png",
+    cover: "argent-bank/cover.webp",
     story: "argent-bank/mobile.png",
     github: "https://github.com/marcbenbouik/projet_11.git",
     deploiement: "à deployer"
