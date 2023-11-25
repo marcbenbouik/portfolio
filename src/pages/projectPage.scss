@@ -11,9 +11,7 @@
     align-items: center;
 
     .chevronLeft {
-        // position: absolute;
         left: 8px;
-        // top: 50%;
     }
 
     .chevronRight {
@@ -30,10 +28,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        // transform: translate(-50%);
     }
-    // transform: translate(50%, 50%);
-    
+
     .globalProject {
         display: flex;
         flex-direction: column;
@@ -42,30 +38,26 @@
         max-width: 500px;
         border-radius: 8px;
         position: relative;
-        
+
         .returnChevron {
             position: absolute;
             left: 16px;
             top: 10px;
         }
-        
-        
-        
+
+
+
         .projectPicture {
             width: 100%;
             position: relative;
-            
-            
-            // .left{
-                //     opacity: 0.5;
-                // }
-                img {
-                    width: 100%;
-                }
+
+            img {
+                width: 100%;
             }
         }
     }
-    
+}
+
 @media screen and (max-width: 500px) {
     .backgroundProject {
         .globalProject {

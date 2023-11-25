@@ -1,5 +1,4 @@
-import profil from "../../pictures/profil.jpg"
-import profil2 from "../../pictures/IMG-20230629-WA0020.jpg"
+import profil from "../../pictures/IMG-20230629-WA0020.jpg"
 import instagram from "../../pictures/texte.jpg"
 import "../circle/circle.scss"
 import { useEffect, useState } from "react"
@@ -36,7 +35,7 @@ function Circle({ dimension, wider }) {
             <img src={instagram} alt="" style={colorCircleSize} />
             <div className="whiteCircle" style={whiteCircleSize}>
                 <div className="circle" style={circleSize}>
-                    <img src={profil2} alt="photo de profil" style={circleSize} />
+                    <img src={profil} alt="profil" style={circleSize} />
                 </div>
             </div>
         </div>

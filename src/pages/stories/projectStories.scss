@@ -80,7 +80,6 @@
                 position: absolute;
                 top: 15px;
                 left: 0px;
-                // transform: translateX(-50%);
                 width: 100%;
                 display: flex;
                 align-items: center;
@@ -162,7 +161,8 @@
             width: 100%;
             padding: 15px 0px;
             text-decoration: unset;
-            &:visited{
+
+            &:visited {
                 color: white;
             }
         }
@@ -199,8 +199,6 @@
         .right {
             display: initial;
             width: 25vw;
-            // position: absolute;
-            // right: -10%;
             margin-right: -15vw;
             max-height: 350px;
             max-width: 250px;

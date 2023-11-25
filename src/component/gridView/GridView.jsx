@@ -32,7 +32,6 @@ function GridView() {
     }
     const getIconColor = (iconType) => (activeIcon === iconType ? "#3277d5" : null);
     const getBorder = (iconType) => (activeIcon === iconType ? "solid 1px #3277d5" : null);
-    console.log(display)
     return (
         <div className='iconDiv'>
             <div className='iconName' style={{ color: getIconColor("grid"), borderTop: getBorder("grid") }} onClick={() => handleIconClick("grid", false)}>

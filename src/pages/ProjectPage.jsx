@@ -1,8 +1,5 @@
-import Circle from "../component/circle/Circle";
 import Header from "../component/header/Header";
-import photo from "../pictures/nina-carducci/nina.png"
 import "../pages/projectPage.scss"
-
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import { project } from "../data/project";
@@ -12,14 +9,10 @@ import ProjectFooter from "../component/projectFooter/ProjectFooter";
 
 function ProjectPage({ id, setId, modale, setModale }) {
     const [pictureId, setPictureId] = useState(0)
-    console.log(id)
     const data = project.filter((projet) => projet.id === id)
-    console.log(data[0])
     const picture = data[0].pictures
-    console.log(picture)
 
     function sliderRight(index, setIndex, array) {
-        console.log(array, array.length, index)
         if (index < array.length - 1) {
             setIndex(index + 1)
         }
@@ -29,7 +22,6 @@ function ProjectPage({ id, setId, modale, setModale }) {
     }
 
     function sliderLeft(index, setIndex, array) {
-        console.log(array, array.length, index)
         if (index === 0) {
             setIndex(array.length - 1)
         }

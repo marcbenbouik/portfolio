@@ -9,7 +9,6 @@ function Grid() {
     const [projectId, setProjectId] = useState(0)
     const [openModale, setOpenModale] = useState(false)
     const display = useStore((state) => state.display)
-    console.log(project)
     function handleOpenModale(projectId) {
         setProjectId(projectId)
         setOpenModale(true)
@@ -27,7 +26,7 @@ function Grid() {
                     {display ? (<ProjectHeader category={projet.category} />) : null}
                     <div tabIndex="0" key={projet.id} className="cover" onClick={() => handleOpenModale(projet.id)}>
                         <img src={`${process.env.PUBLIC_URL}/pictures/${projet.cover}`}
-                            alt={`photo du projet ${projet.name}`} width={298} height={298} />
+                            alt={`projet ${projet.name}`} width={298} height={298} />
                     </div>
                     {display ? (<ProjectFooter description={""} />) : null}
                 </div>

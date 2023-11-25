@@ -1,8 +1,7 @@
-import { Link } from "react-router-dom";
-import soon from "../../pictures/soon.png"
 import "../storiesSection/storiesSection.scss"
-import StoryCircle from "../storyCircle/StoryCircle";
+import { Link } from "react-router-dom";
 import { project } from "../../data/project";
+import StoryCircle from "../storyCircle/StoryCircle";
 
 function StoriesSection() {
     const categories = []
@@ -16,7 +15,6 @@ function StoriesSection() {
         }
     })
 
-    console.log(filteredArray)
     return (
         <section className="projectDiv">
             {filteredArray.map((projet, index) => (

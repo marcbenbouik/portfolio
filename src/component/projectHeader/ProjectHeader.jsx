@@ -1,8 +1,7 @@
 import "../projectHeader/projectHeader.scss"
 import Circle from "../circle/Circle"
 
-function ProjectHeader({category}) {
-    console.log(category)
+function ProjectHeader({ category }) {
     return (
         <div className="projectHeader">
             <Circle dimension={45} className="circle" />

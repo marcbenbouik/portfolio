@@ -2,7 +2,6 @@ import Button from "../button/Button";
 import Circle from "../circle/Circle";
 import "../section/section.scss"
 import VerifiedSharpIcon from '@mui/icons-material/VerifiedSharp';
-// import { useState, useEffect } from 'react';
 import StatisticBar from "../statisticBar/StatisticBar";
 import { useStore } from "../../store"
 function Section() {

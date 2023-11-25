@@ -1,10 +1,10 @@
 import "../stories/projectStories.scss"
 
 import { project } from "../../data/project"
-import { useEffect, useRef, useState } from "react"
+import { useRef, useState } from "react"
 import Circle from "../../component/circle/Circle"
 import VerifiedSharpIcon from '@mui/icons-material/VerifiedSharp';
-import { faPlay, faPause, faVolumeXmark, faChevronUp, faXmark } from "@fortawesome/free-solid-svg-icons";
+import { faPause, faVolumeXmark, faChevronUp, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link, useParams } from "react-router-dom";
@@ -12,12 +12,13 @@ import { Link, useParams } from "react-router-dom";
 function ProjectStories() {
     const startId = useParams()
     const intStart = parseInt(startId.id, 10)
+
     const [storyInCategory, setStoryInCategory] = useState(0)
-    const [activeProjectInStory, setActiveProjectInStory] = useState(null)
     const [storyByCategory, setStoryByCategory] = useState([])
+
     const carouselRef = useRef(null);
     const touchStart = useRef(null);
-    let storiesByCategory
+
     const seoArray = project.filter((projet) => projet.category === "SEO")
     const responsiveArray = project.filter((projet) => projet.category === "Responsive")
     const apiArray = project.filter((projet) => projet.category === "API")
@@ -33,10 +34,10 @@ function ProjectStories() {
             return false
         }
     })
-    console.log(startId.id, intStart)
+
     const [activeStory, setActiveStory] = useState(intStart)
-    const [leftStory, setLeftStory] = useState(intStart == 0 ? null : intStart - 1)
-    const [rightStory, setRightStory] = useState(intStart == filteredArray.length - 1 ? null : intStart + 1)
+    const [leftStory, setLeftStory] = useState(intStart === 0 ? null : intStart - 1)
+    const [rightStory, setRightStory] = useState(intStart === filteredArray.length - 1 ? null : intStart + 1)
 
     const getActiveStory = (story) => {
         if (filteredProjects.length === 3) {
@@ -182,7 +183,6 @@ function ProjectStories() {
     }
 
     function clickRightInStory() {
-        console.log(storyByCategory.length)
         if (storyInCategory !== storyByCategory.length - 1) {
             setStoryInCategory(storyInCategory + 1)
         }
@@ -213,7 +213,6 @@ function ProjectStories() {
             return
         }
     }
-    console.log(leftStory, activeStory, rightStory, filteredProjects, storiesByCategory)
     return (
         <main className="story rowCenter" ref={carouselRef} onTouchStart={startSwipe} onTouchEnd={endSwipe}>
             <Link className="xmark" to={"/"} name="page d'accueil" >
@@ -221,7 +220,6 @@ function ProjectStories() {
             </Link>
             {filteredProjects.map((projet, index) => {
                 const storiesByCategoryCondition = (leftStory === null && index === 0) || (index === 1 && rightStory === null) || (filteredProjects[2] !== undefined && index === 1);
-                storiesByCategory = storiesByCategoryCondition ? project.filter((proj) => proj.category === project[projet.id].category) : []
                 return (
                     <div key={projet.id} className={`border ${getActiveStory(index)}`} onClick={() => carousel(index, projet.id)}>
                         {storiesByCategoryCondition ? (
@@ -229,7 +227,7 @@ function ProjectStories() {
                                 <div className="whiteContainer">
                                     {storyByCategory[storyInCategory] ? (
                                         storyByCategory.map((image, index) => (
-                                            <div className={index !== storyInCategory ? "grey white" : "white"}></div>
+                                            <div key={index} className={index !== storyInCategory ? "grey white" : "white"}></div>
                                         ))
                                     ) : null}
                                 </div>
@@ -242,7 +240,7 @@ function ProjectStories() {
                                 <div className="buttonStoryHeader rowCenter">
                                     <div className="bookmark">
                                         <a href="https://www.linkedin.com/in/marc-benbouik-97a5652a1" name="Linkedin">
-                                            <FontAwesomeIcon icon={faLinkedin} size="med" style={{ color: "#ffff", }} />
+                                            <FontAwesomeIcon icon={faLinkedin} size="sm" style={{ color: "#ffff", }} />
                                         </a>
                                         <div className="linkedin">
                                             <FontAwesomeIcon icon={faPause} style={{ color: "#ffff", }} />
@@ -250,7 +248,7 @@ function ProjectStories() {
                                     </div>
                                     <div className="bookmark">
                                         <a href="https://www.linkedin.com/in/marc-benbouik-97a5652a1" name="Linkedin">
-                                            <FontAwesomeIcon icon={faLinkedin} size="med" style={{ color: "#ffff", }} />
+                                            <FontAwesomeIcon icon={faLinkedin} size="sm" style={{ color: "#ffff", }} />
                                         </a>
                                         <div className="linkedin">
                                             <FontAwesomeIcon icon={faVolumeXmark} style={{ color: "#ffff", }} />
