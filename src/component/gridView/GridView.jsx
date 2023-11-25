@@ -44,7 +44,7 @@ function GridView() {
                 {wider ? (<p>LISTE</p>) : null}
             </div>
             <div className='iconName bookmark' style={{ color: getIconColor("other"), borderTop: getBorder("other") }} onClick={() => handleIconClick("other", display)} >
-                <a href="https://www.linkedin.com/in/marc-benbouik-97a5652a1">
+                <a href="https://www.linkedin.com/in/marc-benbouik-97a5652a1" name="Linkedin" >
                     <FontAwesomeIcon icon={faLinkedin} size="xl" />
                 </a>
                 <div className="linkedin">

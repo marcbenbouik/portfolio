@@ -216,8 +216,8 @@ function ProjectStories() {
     console.log(leftStory, activeStory, rightStory, filteredProjects, storiesByCategory)
     return (
         <main className="story rowCenter" ref={carouselRef} onTouchStart={startSwipe} onTouchEnd={endSwipe}>
-            <Link className="xmark" to={"/"} >
-            <FontAwesomeIcon icon={faXmark} size="xl"/>
+            <Link className="xmark" to={"/"} name="page d'accueil" >
+                <FontAwesomeIcon icon={faXmark} size="xl" />
             </Link>
             {filteredProjects.map((projet, index) => {
                 const storiesByCategoryCondition = (leftStory === null && index === 0) || (index === 1 && rightStory === null) || (filteredProjects[2] !== undefined && index === 1);
@@ -241,24 +241,21 @@ function ProjectStories() {
                                 </div>
                                 <div className="buttonStoryHeader rowCenter">
                                     <div className="bookmark">
-                                        <a href="https://www.linkedin.com/in/marc-benbouik-97a5652a1">
+                                        <a href="https://www.linkedin.com/in/marc-benbouik-97a5652a1" name="Linkedin">
                                             <FontAwesomeIcon icon={faLinkedin} size="med" style={{ color: "#ffff", }} />
                                         </a>
                                         <div className="linkedin">
                                             <FontAwesomeIcon icon={faPause} style={{ color: "#ffff", }} />
-                                            {/* <BookmarkBorderSharpIcon sx={{ fontSize: 29 }} /> */}
                                         </div>
                                     </div>
                                     <div className="bookmark">
-                                        <a href="https://www.linkedin.com/in/marc-benbouik-97a5652a1">
+                                        <a href="https://www.linkedin.com/in/marc-benbouik-97a5652a1" name="Linkedin">
                                             <FontAwesomeIcon icon={faLinkedin} size="med" style={{ color: "#ffff", }} />
                                         </a>
                                         <div className="linkedin">
                                             <FontAwesomeIcon icon={faVolumeXmark} style={{ color: "#ffff", }} />
-                                            {/* <BookmarkBorderSharpIcon sx={{ fontSize: 29 }} /> */}
                                         </div>
                                     </div>
-                                    {/* <FontAwesomeIcon icon={faPlay} style={{ color: "#ffff", }} /> */}
                                     <svg className="storyPoint">
                                         <circle cx="6" cy="10" r="2.75"></circle>
                                         <circle cx="14" cy="10" r="2.75"></circle>
@@ -271,7 +268,7 @@ function ProjectStories() {
                         <img src={`../../../pictures/${storiesByCategoryCondition && storyByCategory[storyInCategory] ? storyByCategory[storyInCategory].story : projet.story}`} alt="" className="storyPicture" />
                         {activeStory === projet.id ? (<div className="clickLeft" onClick={clickLeftInStory}></div>) : null}
                         {projet.id === activeStory ? (
-                            <Link className="storyFooter">
+                            <Link to={"/"} className="storyFooter" name="Accueil">
                                 <FontAwesomeIcon icon={faChevronUp} style={{ color: "#ffff", }} />
                                 <p>Voir plus</p>
                             </Link>
