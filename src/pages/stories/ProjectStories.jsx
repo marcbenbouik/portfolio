@@ -264,10 +264,10 @@ function ProjectStories() {
                                 </div>
                             </div>
                         ) : null}
-                        {activeStory === projet.id ? (<div className="clickRight" onClick={clickRightInStory}></div>) : null}
+                        {storiesByCategoryCondition ? (<div className="clickRight" onClick={clickRightInStory}></div>) : null}
                         <img src={`../../../pictures/${storiesByCategoryCondition && storyByCategory[storyInCategory] ? storyByCategory[storyInCategory].story : projet.story}`} alt="" className="storyPicture" />
-                        {activeStory === projet.id ? (<div className="clickLeft" onClick={clickLeftInStory}></div>) : null}
-                        {projet.id === activeStory ? (
+                        {storiesByCategoryCondition ? (<div className="clickLeft" onClick={clickLeftInStory}></div>) : null}
+                        {storiesByCategoryCondition ? (
                             <Link to={"/"} className="storyFooter" name="Accueil">
                                 <FontAwesomeIcon icon={faChevronUp} style={{ color: "#ffff", }} />
                                 <p>Voir plus</p>
