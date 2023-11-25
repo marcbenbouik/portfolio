@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { project } from "../../data/project";
 import "../grid/grid.scss"
-import ProjectPage from "../../pages/ProjectPage";
 import { useStore } from "../../store"
 import ProjectHeader from "../projectHeader/ProjectHeader";
 import ProjectFooter from "../projectFooter/ProjectFooter";
+import Modale from "../modale/Modale";
 function Grid() {
     const [projectId, setProjectId] = useState(0)
     const [openModale, setOpenModale] = useState(false)
@@ -31,7 +31,7 @@ function Grid() {
                     {display ? (<ProjectFooter description={""} />) : null}
                 </div>
             ))}
-            {openModale ? <ProjectPage id={projectId} setId={setProjectId} modale={openModale} setModale={setOpenModale} /> : null}
+            {openModale ? <Modale id={projectId} setId={setProjectId} modale={openModale} setModale={setOpenModale} /> : null}
         </div>
     )
 }

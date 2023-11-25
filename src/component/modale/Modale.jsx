@@ -1,13 +1,13 @@
-import Header from "../component/header/Header";
-import "../pages/projectPage.scss"
+import Header from "../header/Header";
+import "../modale/modale.scss"
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
-import { project } from "../data/project";
+import { project } from "../../data/project";
 import { useState } from "react";
-import ProjectHeader from "../component/projectHeader/ProjectHeader";
-import ProjectFooter from "../component/projectFooter/ProjectFooter";
+import ProjectHeader from "../projectHeader/ProjectHeader";
+import ProjectFooter from "../projectFooter/ProjectFooter";
 
-function ProjectPage({ id, setId, modale, setModale }) {
+function Modale({ id, setId, modale, setModale }) {
     const [pictureId, setPictureId] = useState(0)
     const data = project.filter((projet) => projet.id === id)
     const picture = data[0].pictures
@@ -57,4 +57,4 @@ function ProjectPage({ id, setId, modale, setModale }) {
     )
 }
 
-export default ProjectPage
+export default Modale
