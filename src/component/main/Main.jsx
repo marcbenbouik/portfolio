@@ -13,8 +13,10 @@ import StoriesSection from "../storiesSection/StoriesSection"
 function Main() {
     const isWider = useStore((state) => state.isWider)
     const setIsWider = useStore((state) => state.setWider)
+    const setDisplay = useStore((state) => state.setDisplay)
 
     useEffect(() => {
+        setDisplay(false)
         function checkWidth() {
             setIsWider(window.innerWidth > 735);
         }
