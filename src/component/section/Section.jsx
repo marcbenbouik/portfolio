@@ -25,9 +25,9 @@ function Section() {
                             </svg>
                         </div>
                         <div className="buttonDiv">
-                            <Button buttonText="Linkedin" link={"https://www.linkedin.com/in/marc-benbouik-97a5652a1"} aria-label="Linkedin" />
-                            <Button buttonText="Malt" link={"https://www.malt.fr/profile/marcbenbouik?overview"} aria-label="Malt" />
-                            <Button buttonText="mail" link={"mailto:marc.benbouik@gmail.com"} aria-label="Email" />
+                            <Button buttonText="Linkedin" link={"https://www.linkedin.com/in/marc-benbouik-97a5652a1"} name={"Linkedin"} />
+                            <Button buttonText="Malt" link={"https://www.malt.fr/profile/marcbenbouik?overview"} name={"Malt"} />
+                            <Button buttonText="mail" link={"mailto:marc.benbouik@gmail.com"} name={"Email"} />
                         </div>
                     </div>
                     {wider ? <StatisticBar /> : null}
