@@ -18,7 +18,7 @@ function StoriesSection() {
     return (
         <section className="projectDiv">
             {filteredArray.map((projet, index) => (
-                <Link to={`/project/${index}`} className="link" aria-label={projet.category}>
+                <Link key={projet.id} to={`/project/${index}`} className="link" aria-label={projet.category}>
                     <StoryCircle title={projet.category} image={projet.cover} />
                 </Link>
             ))}

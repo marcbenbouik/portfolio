@@ -93,6 +93,8 @@ function ProjectStories() {
             setActiveStory(activeStory + 1);
             setLeftStory(leftStory + 1);
             setRightStory(rightStory + 1);
+        } else if (index === 0 && leftStory === null) {
+            return
         } else if (index === 0 && isFirstProject) {
             setStoryInCategory(0)
             // Gestion du cas où on clique sur la toute premiere image
