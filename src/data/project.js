@@ -13,6 +13,7 @@ export const project = [
     ],
     cover: "nina-carducci/cover.webp",
     coverMobile: "nina-carducci/coverMobile.webp",
+    miniature: "nina-carducci/miniature.webp",
     story: "nina-carducci/mobile.webp",
     github: "https://github.com/marcbenbouik/projet_9.git",
     deploiement: "https://marcbenbouik.github.io/projet_9/"
@@ -29,6 +30,7 @@ export const project = [
     ],
     cover: "kasa/cover.webp",
     coverMobile: "kasa/coverMobile.webp",
+    miniature: "kasa/miniature.webp",
     story: "kasa/mobile.webp",
     github: "https://github.com/marcbenbouik/projet_8.git",
     deploiement: "https://marcbenbouik.github.io/projet_8/"
@@ -45,6 +47,7 @@ export const project = [
     ],
     cover: "sophie-buel/cover.webp",
     coverMobile: "sophie-buel/coverMobile.webp",
+    miniature: "sophie-buel/miniature.webp",
     story: "sophie-buel/mobile.webp",
     github: "https://github.com/marcbenbouik/projet_8.git",
     deploiement: "a deployer"
@@ -60,6 +63,7 @@ export const project = [
     ],
     cover: "ohmyfood/cover.webp",
     coverMobile: "ohmyfood/coverMobile.webp",
+    miniature: "ohmyfood/miniature.webp",
     story: "ohmyfood/mobile.webp",
     github: "https://github.com/marcbenbouik/projet_4.git",
     deploiement: "https://marcbenbouik.github.io/projet_4/"
@@ -76,6 +80,7 @@ export const project = [
     ],
     cover: "argent-bank/cover.webp",
     coverMobile: "argent-bank/coverMobile.webp",
+    miniature: "argent-bank/miniature.webp",
     story: "argent-bank/mobile.webp",
     github: "https://github.com/marcbenbouik/projet_11.git",
     deploiement: "à deployer"
