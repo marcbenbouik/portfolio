@@ -1,4 +1,4 @@
-import profil from "../../pictures/IMG-20230629-WA0020.jpg"
+import profil from "../../pictures/profil.webp"
 import instagram from "../../pictures/texte.jpg"
 import "../circle/circle.scss"
 import { useEffect, useState } from "react"
