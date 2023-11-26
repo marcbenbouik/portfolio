@@ -25,8 +25,17 @@ function Grid() {
                 <div key={projet.id}>
                     {display ? (<ProjectHeader category={projet.category} />) : null}
                     <div tabIndex="0" key={projet.id} className="cover" onClick={() => handleOpenModale(projet.id)}>
-                        <img src={`${process.env.PUBLIC_URL}/pictures/${projet.cover}`}
-                            alt={`projet ${projet.name}`} width={298} height={298} />
+                        {/* <img src={`${process.env.PUBLIC_URL}/pictures/${projet.cover}`}
+                            alt={`projet ${projet.name}`} width={298} height={298} /> */}
+                        <picture>
+                            <source media="(max-width: 735px)" srcset={`${process.env.PUBLIC_URL}/pictures/${projet.coverMobile} 735w`} />
+                            <source srcset={`${process.env.PUBLIC_URL}/pictures/${projet.cover} 900w`} />
+                            <img src={`${process.env.PUBLIC_URL}/pictures/${projet.cover}`}
+                                sizes="(max-width: 735px) 735px, 900px"
+                                alt={`projet ${projet.name}`}
+                                width={298}
+                                height={298} />
+                        </picture>
                     </div>
                     {display ? (<ProjectFooter description={""} />) : null}
                 </div>

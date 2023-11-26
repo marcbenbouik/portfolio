@@ -12,6 +12,7 @@ export const project = [
       { pic: "nina-carducci/SEO_mobile.webp" }
     ],
     cover: "nina-carducci/cover.webp",
+    coverMobile: "nina-carducci/coverMobile.webp",
     story: "nina-carducci/mobile.webp",
     github: "https://github.com/marcbenbouik/projet_9.git",
     deploiement: "https://marcbenbouik.github.io/projet_9/"
@@ -27,6 +28,7 @@ export const project = [
       { pic: "kasa/a-propos.webp" }
     ],
     cover: "kasa/cover.webp",
+    coverMobile: "kasa/coverMobile.webp",
     story: "kasa/mobile.webp",
     github: "https://github.com/marcbenbouik/projet_8.git",
     deploiement: "https://marcbenbouik.github.io/projet_8/"
@@ -42,6 +44,7 @@ export const project = [
       { pic: "sophie-buel/edition.webp" }
     ],
     cover: "sophie-buel/cover.webp",
+    coverMobile: "sophie-buel/coverMobile.webp",
     story: "sophie-buel/mobile.webp",
     github: "https://github.com/marcbenbouik/projet_8.git",
     deploiement: "a deployer"
@@ -56,6 +59,7 @@ export const project = [
       { pic: "ohmyfood/restaurant.webp" }
     ],
     cover: "ohmyfood/cover.webp",
+    coverMobile: "ohmyfood/coverMobile.webp",
     story: "ohmyfood/mobile.webp",
     github: "https://github.com/marcbenbouik/projet_4.git",
     deploiement: "https://marcbenbouik.github.io/projet_4/"
@@ -71,6 +75,7 @@ export const project = [
       { pic: "argent-bank/count.webp" }
     ],
     cover: "argent-bank/cover.webp",
+    coverMobile: "argent-bank/coverMobile.webp",
     story: "argent-bank/mobile.webp",
     github: "https://github.com/marcbenbouik/projet_11.git",
     deploiement: "à deployer"
