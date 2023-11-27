@@ -33,7 +33,7 @@ export const project = [
     miniature: "kasa/miniature.webp",
     story: "kasa/mobile.webp",
     github: "https://github.com/marcbenbouik/projet_8.git",
-    deploiement: "https://marcbenbouik.github.io/projet_8/"
+    deploiement: "https://kasa-marc-ben-bouiks-projects.vercel.app/"
   },
   {
     id: 2,
